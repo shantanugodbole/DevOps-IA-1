@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              "Welcome to Morsey!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+              "Welcome to Morsey",
               style: GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 32),
               textAlign: TextAlign.center,
             ),
@@ -83,7 +83,8 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   "English -> Morse",
-                  style: GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 28),
+                  style:
+                      GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 28),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -97,7 +98,8 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   "Morse -> English",
-                  style: GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 28),
+                  style:
+                      GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 28),
                   textAlign: TextAlign.center,
                 ),
               )
