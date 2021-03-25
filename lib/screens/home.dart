@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Material(
         child: new Container(
-      color: Color(0xFFFEEAE6),
+      color: Colors.amber,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
