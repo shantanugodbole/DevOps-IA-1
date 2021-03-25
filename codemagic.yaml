@@ -4,11 +4,12 @@
 
 workflows:
   example-workflow:
-    name: Example Workflow
+    name: Test Workflow
     scripts:
-      - name: Step name
-        script: echo "Hello Codemagician!"
+      - name: Step 1
+        script: echo "Testing Codemagic"
     publishing:
       email:
         recipients:
-          - codemagic@example.com
+          - akshar.barchha@somaiya.edu
+          - shantanu.godbole@somaiya.edu
