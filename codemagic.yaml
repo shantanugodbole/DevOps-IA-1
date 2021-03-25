@@ -1,15 +1,49 @@
-# Customize the codemagic.yaml file according to your project and commit it to the root of your repository
-# Check out https://docs.codemagic.io/getting-started/yaml/ for more information
-# You can also download your configuration from Worklow Editor to get started
+# Automatically generated on 2021-03-25 UTC from https://codemagic.io/app/605c71743c76b35e34636b30/settings
+# Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
 
 workflows:
-  example-workflow:
-    name: Test Workflow
+  default-workflow:
+    name: Default Workflow
+    instance_type: mac_pro
+    max_build_duration: 60
+    environment:
+      flutter: 1.22.6
+      xcode: latest
+      cocoapods: default
+    cache:
+      cache_paths: []
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: '*'
+          include: true
+          source: true
     scripts:
-      - name: Step 1
-        script: echo "Testing Codemagic"
+      - |
+        # set up debug keystore
+        rm -f ~/.android/debug.keystore
+        keytool -genkeypair \
+          -alias androiddebugkey \
+          -keypass android \
+          -keystore ~/.android/debug.keystore \
+          -storepass android \
+          -dname 'CN=Android Debug,O=Android,C=US' \
+          -keyalg 'RSA' \
+          -keysize 2048 \
+          -validity 10000
+      - |
+        # set up local properties
+        echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
+      - cd . && flutter packages pub get
+      - cd . && flutter build apk --release
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
+      - build/**/outputs/**/mapping.txt
+      - flutter_drive.log
     publishing:
       email:
         recipients:
-          - akshar.barchha@somaiya.edu
           - shantanu.godbole@somaiya.edu
+          - akshar.barchha@somaiya.edu
