@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             // padding: EdgeInsets.all(20),
             alignment: Alignment.center,
             child: Text(
-              "Morsey",
+              "Welcome to Morse Translator!",
               style: GoogleFonts.permanentMarker(
                   color: Color(0xFF442C2E),
                   fontWeight: FontWeight.bold,
