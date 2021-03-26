@@ -36,6 +36,8 @@ workflows:
         # set up local properties
         echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - cd . && flutter packages pub get
+      - echo "CARRYING OUT TEST"
+      - flutter test test/counter_test.dart
       - cd . && flutter build apk --release
     artifacts:
       - build/**/outputs/**/*.apk
