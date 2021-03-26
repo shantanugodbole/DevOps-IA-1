@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './EngToMorse.dart';
 import './MorseToEng.dart';
-// import '../services/api.dart';
-// import 'package:http/http.dart' as http;
-// import 'dart:convert';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,19 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // var url =
-  //     "http://api.funtranslations.com/translate/morse.json?text=Hello World";
-
-  // @override
-  // void initState() {
-  //   final apiCaller = GetData();
-  //   var response = apiCaller.getData(url);
-  //   print(response);
-  //   var decodedResponse = jsonDecode(response)['contents']['translated'];
-  //   print(decodedResponse);
-  //   super.initState();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Material(

@@ -31,8 +31,10 @@ dependencies:
   google_fonts: ^1.1.1
 
 dev_dependencies:
+  test: 
   flutter_test:
     sdk: flutter
+    
 
 flutter_icons:
   image_path: "icons/circle-cropped.png" 
