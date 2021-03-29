@@ -5,6 +5,17 @@ import 'package:share/share.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
 
+class InputValidator{
+  static String validatingform(String value){
+    if(value == null || value == ""){
+      return "Please enter some input !!";
+    }
+    else {
+      return value;
+    }
+  }
+}
+
 class EngToMorse extends StatefulWidget {
   @override
   _EngToMorseState createState() => _EngToMorseState();
@@ -29,6 +40,7 @@ class _EngToMorseState extends State<EngToMorse> {
     super.initState();
   }
 
+  
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -47,9 +59,13 @@ class _EngToMorseState extends State<EngToMorse> {
             ),
             Container(
               margin: EdgeInsets.all(15),
-              child: TextField(
+              child: TextFormField(
                 style: TextStyle(fontSize: 22),
                 controller: inputController,
+                validator: (String value){
+                  String ans = InputValidator.validatingform(value);
+                  return ans;
+                },
                 maxLines: 6,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(

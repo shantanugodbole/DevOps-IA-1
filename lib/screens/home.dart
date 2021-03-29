@@ -11,8 +11,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: new Container(
+    return Scaffold(
+        body: new Container(
       color: Colors.amber,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   "English -> Morse",
                   style:
-                      GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 28),
+                      GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 20),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   "Morse -> English",
                   style:
-                      GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 28),
+                      GoogleFonts.allan(color: Color(0xFF442C2E), fontSize: 20),
                   textAlign: TextAlign.center,
                 ),
               )

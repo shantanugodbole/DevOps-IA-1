@@ -1,4 +1,4 @@
-# Automatically generated on 2021-03-25 UTC from https://codemagic.io/app/605c71743c76b35e34636b30/settings
+# Automatically generated on 2021-03-29 UTC from https://codemagic.io/app/605c71743c76b35e34636b30/settings
 # Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
 
 workflows:
@@ -36,8 +36,8 @@ workflows:
         # set up local properties
         echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - cd . && flutter packages pub get
-      - echo "CARRYING OUT TEST"
-      - flutter test test/counter_test.dart
+      - flutter test test
+      - cd . && flutter test
       - cd . && flutter build apk --release
     artifacts:
       - build/**/outputs/**/*.apk
