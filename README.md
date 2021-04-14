@@ -11,7 +11,7 @@ This application has been built using the DevOps methodology with the help of Co
 
 Codemagic is a CI/CD tool mainly focusing on the integration and deployment of mobile applications be it Flutter, React-native or iOS. 
 
-With the help of Codemagic, you can build, test, and publish Flutter apps with zero configuration and run builds in controlled environments using custom workflows.
+With the help of Codemagic, you can build, test, and publish Flutter apps with zero configuration and run builds in controlled environments using custom workflows
 
 
 ![gif](https://github.com/shantanugodbole/Morsey/blob/main/morse_translator/images/demo.gif)
